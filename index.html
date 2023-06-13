@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content=" =device-width, initial-scale=1.0" />
     <title>Balazs Hevesi</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-green-400">
-    
-</body>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styless.css" />
+  </head>
+  <body class="selection:bg-red-200 bg-cyan-500 flex flex-col text-white">
+    <div class="balls">
+      <div class="cursor01 movinggg"></div>
+      <div class="cursor02 movinggg"></div>
+      <div class="cursor03 movinggg"></div>
+      <div class="cursor04 movinggg"></div>
+      <div class="cursor05 movinggg"></div>
+      <div class="cursor06 movinggg"></div>
+      <div class="cursor07 movinggg"></div>
+    </div>
+
+    <div class="bg-cyan-500 h-screen flex flex-col justify-center items-center">
+      <div class="fixed z-0 flex flex-col justify-center items-center">
+        <div class="relative pr-10 pl-10 flex flex-col gap-2">
+          <h2 class="select-none">
+            <span class="handshake">👋</span> Tjena! Jag heter
+          </h2>
+          <h1 class="text-8xl font-bold text-center">Balazs Hevesi</h1>
+          <h3
+            class="select-none miniDesc text-right cursor-pointer transition-all origin-center active:translate-y-1/2 active:opacity-0 font-semibold text-amber-200"
+          >
+            // Webbutvecklare
+          </h3>
+        </div>
+        <div
+          class="animate-bounce mt-8 flex items-center justify-center w-12 h-12 cursor-pointer transition-all active:opacity-50"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="Outline"
+            fill="white"
+            viewBox="0 0 24 24"
+            width="35px"
+            height="35px"
+          >
+            <path
+              d="M18.71,8.21a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42,0L6.71,8.21a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.59,4.59a3,3,0,0,0,4.24,0l4.59-4.59A1,1,0,0,0,18.71,8.21Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative z-10 bg-zinc-800 border-t-2 border-zinc-600 rounded-xl shadow shadow-teal-600">
+      <nav class="sticky top-5 mt-5 flex justify-center">
+        <ui class="list-none flex gap-5 p-2 bg-cyan-500 rounded-md border-t-2 border-cyan-300 shadow">
+          <li class="bg-slate-600 border-t-2 border-slate-500 p-1 px-5 rounded-md cursor-pointer select-none transition-all active:scale-95">Hem</li>
+          <li class="bg-slate-600 border-t-2 border-slate-500 p-1 px-5 rounded-md cursor-pointer select-none transition-all active:scale-95">Bakgrund</li>
+          <li class="bg-slate-600 border-t-2 border-slate-500 p-1 px-5 rounded-md cursor-pointer select-none transition-all active:scale-95">Projekt</li>
+          <li class="bg-slate-600 border-t-2 border-slate-500 p-1 px-5 rounded-md cursor-pointer select-none transition-all active:scale-95">Kontakta mig</li>
+        </ui>
+      </nav>
+      <div class="bg-slate-50 h-96 w-5"></div>
+      <div class="bg-slate-50 h-96 w-5"></div>
+      <div class="bg-slate-50 h-96 w-5"></div>
+      <div class="bg-slate-50 h-96 w-5"></div>
+      <div class="bg-slate-50 h-96 w-5"></div>
+    </div>
+  </body>
 </html>
