@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content=" =device-width, initial-scale=1.0" />
     <title>Balazs Hevesi</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!--
+      <script src="https://cdn.tailwindcss.com"></script>
+    -->
+    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styless.css" />
   </head>
-  <body class="selection:bg-red-200 bg-cyan-500 flex flex-col text-white">
+  <body class="selection:bg-red-200 bg-gradient-to-r from-cyan-600 to-cyan-300 flex flex-col text-white cursor-none">
+    <div class="dummy scale-150 scale-100"></div>
     <div class="balls">
       <div class="cursor01 movinggg"></div>
       <div class="cursor02 movinggg"></div>
@@ -19,53 +24,84 @@
       <div class="cursor06 movinggg"></div>
       <div class="cursor07 movinggg"></div>
     </div>
+    <div class="main-cursorrr absolute backdrop-invert h-2 w-2 z-50 rounded-full shadow pointer-events-none"></div>
 
-    <div class="bg-cyan-500 h-screen flex flex-col justify-center items-center">
-      <div class="fixed z-0 flex flex-col justify-center items-center">
-        <div class="relative pr-10 pl-10 flex flex-col gap-2">
-          <h2 class="select-none">
-            <span class="handshake">👋</span> Tjena! Jag heter
-          </h2>
-          <h1 class="text-8xl font-bold text-center">Balazs Hevesi</h1>
-          <h3
-            class="select-none miniDesc text-right cursor-pointer transition-all origin-center active:translate-y-1/2 active:opacity-0 font-semibold text-amber-200"
-          >
-            // Webbutvecklare
-          </h3>
+    <nav class="fixed z-40 h-full flex flex-col justify-center items-center p-2">
+      <div class="flex flex-col justify-center gap-4 items-center bg-white p-2 rounded-full shadow font-medium">
+        <div class="h-8 w-8 rounded-full flex justify-center items-center bg-amber-400 [&>*]:hover:block">
+          1
+          <div class="z-0 whitespace-nowrap absolute hidden animate-hover-nav text-black bg-white rounded-full p-2 left-16 shadow text-zinc-600 font-semibold">Hem</div>
         </div>
-        <div
-          class="animate-bounce mt-8 flex items-center justify-center w-12 h-12 cursor-pointer transition-all active:opacity-50"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            id="Outline"
-            fill="white"
-            viewBox="0 0 24 24"
-            width="35px"
-            height="35px"
-          >
-            <path
-              d="M18.71,8.21a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42,0L6.71,8.21a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.59,4.59a3,3,0,0,0,4.24,0l4.59-4.59A1,1,0,0,0,18.71,8.21Z"
-            />
+        <div class="h-8 w-8 bg-cyan-500 rounded-full flex justify-center items-center [&>*]:hover:block">
+          2
+          <div class="z-0 whitespace-nowrap absolute hidden animate-hover-nav text-black bg-white rounded-full p-2 left-16 shadow text-zinc-600 font-semibold">Om Mig</div>
+        </div>
+        <div class="h-8 w-8 bg-cyan-500 rounded-full flex justify-center items-center [&>*]:hover:block">
+          3
+          <div class="z-0 whitespace-nowrap absolute hidden animate-hover-nav text-black bg-white rounded-full p-2 left-16 shadow text-zinc-600 font-semibold">Projekt</div>
+        </div>
+        <div class="h-8 w-8 bg-cyan-500 rounded-full flex justify-center items-center [&>*]:hover:block">
+          4
+          <div class="z-0 whitespace-nowrap absolute hidden animate-hover-nav text-black bg-white rounded-full p-2 left-16 shadow text-zinc-600 font-semibold">Kontakt</div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bg-gradient-to-r from-cyan-600 to-cyan-300 h-screen flex flex-col justify-center items-center">
+      <div class="fixed z-0 flex flex-col justify-center items-center">
+        <div class="relative pr-20 pl-20 flex flex-col animate-on-load">
+          <h2 class="select-none flex">
+            <div class="hover:animate-waving-hand relative z-10">👋</div>
+            Tjena! Jag heter
+          </h2>
+
+          <h1 class="text-8xl relative z-0 font-bold text-center drop-shadow-lg flex flex-col md:flex-row md:gap-8">
+            <span>Bal<span class="aaa">a</span>zs</span><span>Hevesi</span>
+          </h1>
+
+          <h3 class="flex ml-auto select-none miniDesc text-right transition-all origin-center active:translate-y-1/2 active:opacity-0 font-semibold text-amber-200 relative z-10 text-lg">// Webbutvecklare</h3>
+        </div>
+        <div class="animate-bounce mt-8 flex items-center justify-center w-12 h-12 transition-all active:opacity-50 drop-shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" id="Outline" fill="white" viewBox="0 0 24 24" width="35px" height="35px">
+            <path d="M18.71,8.21a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42,0L6.71,8.21a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.59,4.59a3,3,0,0,0,4.24,0l4.59-4.59A1,1,0,0,0,18.71,8.21Z" />
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="relative z-10 bg-zinc-800 border-t-2 border-zinc-600 rounded-xl shadow shadow-teal-600">
-      <nav class="sticky top-5 mt-5 flex justify-center">
-        <ui class="list-none flex gap-5 p-2 bg-cyan-500 rounded-md border-t-2 border-cyan-300 shadow">
-          <li class="bg-slate-600 border-t-2 border-slate-500 p-1 px-5 rounded-md cursor-pointer select-none transition-all active:scale-95">Hem</li>
-          <li class="bg-slate-600 border-t-2 border-slate-500 p-1 px-5 rounded-md cursor-pointer select-none transition-all active:scale-95">Bakgrund</li>
-          <li class="bg-slate-600 border-t-2 border-slate-500 p-1 px-5 rounded-md cursor-pointer select-none transition-all active:scale-95">Projekt</li>
-          <li class="bg-slate-600 border-t-2 border-slate-500 p-1 px-5 rounded-md cursor-pointer select-none transition-all active:scale-95">Kontakta mig</li>
-        </ui>
-      </nav>
-      <div class="bg-slate-50 h-96 w-5"></div>
-      <div class="bg-slate-50 h-96 w-5"></div>
-      <div class="bg-slate-50 h-96 w-5"></div>
-      <div class="bg-slate-50 h-96 w-5"></div>
-      <div class="bg-slate-50 h-96 w-5"></div>
+    <div class="relative z-10 bg-zinc-100 text-zinc-800 mr-auto ml-auto max-w-7xl border-t-2 text-lg border-white rounded-xl shadow-2xl flex flex-col items-center">
+      <div class="max-w-4xl p-16 flex justify-center items-center flex-col gap-5">
+        <h4 class="font-medium text-3xl text-center">Vem är jag?</h4>
+        <p>
+          Tjena! Jag heter Balazs Hevesi (namnet är av ungerskt ursprung). I nuläget så är jag en teknik studerande gymnasieelev i Kronoberg, Älmhult som har ett stort intresse för webbutveckling. Det var först i början av tvåan där jag skrev min första rad HTML. Snabbt därefter blev jag intresserad av hur webben fungerar. “Att bli webbutvecklare kanske är något för mig”? tänkte jag då. Då bestämde jag mig för att ta webbutvecklingen på allvar eftersom jag inte hade något intresse av att plugga vidare på universitet i 5 år till. <br />
+          Med hjälp av resurser som TheOdinProject har jag studerat webbutveckling parallellt med skolan i snart ett år.
+        </p>
+        <div class="flex gap-5 w-full text-center">
+          <div class="bg-zinc-200 p-4 grow basis-1/3 rounded-lg border-t-2 border-zinc-300">
+            <h5 class="mb-2">Mina kunskaper i frontend</h5>
+            <div class="text-2xl">
+              <i class="devicon-html5-plain"></i>
+              <i class="devicon-css3-plain"></i>
+              <i class="devicon-tailwindcss-plain"></i>
+              <i class="devicon-javascript-plain"></i>
+            </div>
+          </div>
+          <div class="mb-2 bg-zinc-200 p-4 grow basis-1/3 rounded-lg border-t-2 border-zinc-300">
+            <h5 class="mb-2">Mina kunskaper i backend</h5>
+            <div class="text-2xl">
+              <i class="devicon-nodejs-plain grow"></i>
+            </div>
+          </div>
+          <div class="mb-2 bg-zinc-200 p-4 grow basis-1/3 rounded-lg border-t-2 border-zinc-300">
+            <h5 class="mb-2">Mina verktyg</h5>
+            <div class="text-2xl">
+              <i class="devicon-vscode-plain"></i>
+              <i class="devicon-git-plain"></i>
+              <i class="devicon-github-original"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
