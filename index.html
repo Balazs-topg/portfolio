@@ -1,64 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content=" =device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Balazs Hevesi</title>
     <!--
       <script src="https://cdn.tailwindcss.com"></script>
     -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css" />
     <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styless.css" />
   </head>
-  <body class="selection:bg-red-200 bg-gradient-to-r from-cyan-600 to-cyan-300 flex flex-col text-white cursor-none">
-    <div class="dummy scale-150 scale-100"></div>
-    <div class="balls">
-      <div class="cursor01 movinggg"></div>
-      <div class="cursor02 movinggg"></div>
-      <div class="cursor03 movinggg"></div>
-      <div class="cursor04 movinggg"></div>
-      <div class="cursor05 movinggg"></div>
-      <div class="cursor06 movinggg"></div>
-      <div class="cursor07 movinggg"></div>
-    </div>
-    <div class="main-cursorrr absolute backdrop-invert h-2 w-2 z-50 rounded-full shadow pointer-events-none"></div>
-
-    <nav class="fixed z-40 h-full flex flex-col justify-center items-center p-2">
-      <div class="flex flex-col justify-center gap-4 items-center bg-white p-2 rounded-full shadow font-medium">
-        <div class="h-8 w-8 rounded-full flex justify-center items-center bg-amber-400 [&>*]:hover:block">
-          1
-          <div class="z-0 whitespace-nowrap absolute hidden animate-hover-nav text-black bg-white rounded-full p-2 left-16 shadow text-zinc-600 font-semibold">Hem</div>
-        </div>
-        <div class="h-8 w-8 bg-cyan-500 rounded-full flex justify-center items-center [&>*]:hover:block">
-          2
-          <div class="z-0 whitespace-nowrap absolute hidden animate-hover-nav text-black bg-white rounded-full p-2 left-16 shadow text-zinc-600 font-semibold">Om Mig</div>
-        </div>
-        <div class="h-8 w-8 bg-cyan-500 rounded-full flex justify-center items-center [&>*]:hover:block">
-          3
-          <div class="z-0 whitespace-nowrap absolute hidden animate-hover-nav text-black bg-white rounded-full p-2 left-16 shadow text-zinc-600 font-semibold">Projekt</div>
-        </div>
-        <div class="h-8 w-8 bg-cyan-500 rounded-full flex justify-center items-center [&>*]:hover:block">
-          4
-          <div class="z-0 whitespace-nowrap absolute hidden animate-hover-nav text-black bg-white rounded-full p-2 left-16 shadow text-zinc-600 font-semibold">Kontakt</div>
-        </div>
+  <body class="pr-4 pl-4 selection:bg-red-200 bg-gradient-to-r from-cyan-600 to-cyan-300 flex flex-col text-white md:cursor-none">
+    <div>
+      <div class="balls">
+        <div class="cursor01 movinggg"></div>
+        <div class="cursor02 movinggg"></div>
+        <div class="cursor03 movinggg"></div>
+        <div class="cursor04 movinggg"></div>
+        <div class="cursor05 movinggg"></div>
+        <div class="cursor06 movinggg"></div>
+        <div class="cursor07 movinggg"></div>
       </div>
-    </nav>
+      <div class="main-cursorrr absolute backdrop-invert h-2 w-2 z-50 rounded-full shadow pointer-events-none hidden md:block"></div>
+    </div>
 
-    <div class="bg-gradient-to-r from-cyan-600 to-cyan-300 h-screen flex flex-col justify-center items-center">
+    <div class="bg-gradient-to-r from-cyan-600 to-cyan-300 h-semi-screen flex flex-col justify-center items-center">
       <div class="fixed z-0 flex flex-col justify-center items-center">
         <div class="relative pr-20 pl-20 flex flex-col animate-on-load">
           <h2 class="select-none flex">
             <div class="hover:animate-waving-hand relative z-10">👋</div>
             Tjena! Jag heter
           </h2>
-
           <h1 class="text-8xl relative z-0 font-bold text-center drop-shadow-lg flex flex-col md:flex-row md:gap-8">
             <span>Bal<span class="aaa">a</span>zs</span><span>Hevesi</span>
           </h1>
-
           <h3 class="flex ml-auto select-none miniDesc text-right transition-all origin-center active:translate-y-1/2 active:opacity-0 font-semibold text-amber-200 relative z-10 text-lg">// Webbutvecklare</h3>
         </div>
         <div class="animate-bounce mt-8 flex items-center justify-center w-12 h-12 transition-all active:opacity-50 drop-shadow-lg">
@@ -68,17 +48,45 @@
         </div>
       </div>
     </div>
+    <div class="burgirMenu">
+      <div class="burgirMenueBtn right-0 top-0 p-4 fixed z-40 active:scale-95 transition-all">
+        <button class="flex items-center justify-center h-16 w-16 text-2xl p-4 text-zinc-800 bg-white rounded-full drop-shadow md:hidden">
+          <i class="fi fi-br-bars-staggered"></i>
+        </button>
+      </div>
+      <nav>
+        <div class="completeBurgir hidden flex fixed top-0 p-10 pb-0 left-0 z-40 w-screen h-screen justify-center items-end">
+          <div class="burgirBg absolute opacity-100 backdrop-blur w-full h-full"></div>
+          <div class="burgirNav shadow-2xl relative bg-slate-100 w-full h-full border-t-2 border-white rounded-t-3xl text-zinc-800 flex justify-center items-center flex-col text-4xl font-bold gap-8 select-none">
+            <button class="absolute top-0 right-0 p-5" aria-label="stäng"><i class="fi fi-br-circle-xmark"></i></button>
+            <button>Hem</button>
+            <button>Om mig</button>
+            <button>Projekt</button>
+            <button>Kontakt</button>
+          </div>
+        </div>
+      </nav>
+    </div>
 
-    <div class="relative z-10 bg-zinc-100 text-zinc-800 mr-auto ml-auto max-w-7xl border-t-2 text-lg border-white rounded-xl shadow-2xl flex flex-col items-center">
-      <div class="max-w-4xl p-16 flex justify-center items-center flex-col gap-5">
-        <h4 class="font-medium text-3xl text-center">Vem är jag?</h4>
-        <p>
+    <div class="relative z-10 bg-zinc-100 text-zinc-800 mr-auto ml-auto max-w-7xl border-t-2 text-lg border-white rounded-xl shadow-2xl flex flex-col p-8 md:p-16">
+      <nav class="sticky text-white top-28 -translate-y-16 z-40 h-0 justify-center items-center select-none hidden md:flex">
+        <div class="flex justify-center gap-3 items-center bg-white p-2 rounded-full shadow font-medium">
+          <div class="p-1 pl-3 pr-3 active:scale-95 transition-all rounded-full flex justify-center items-center bg-amber-400">Hem</div>
+          <div class="p-1 pl-3 pr-3 active:scale-95 transition-all bg-cyan-500 rounded-full flex justify-center items-center">Om mig</div>
+          <div class="p-1 pl-3 pr-3 active:scale-95 transition-all bg-cyan-500 rounded-full flex justify-center items-center">Projekt</div>
+          <div class="p-1 pl-3 pr-3 active:scale-95 transition-all bg-cyan-500 rounded-full flex justify-center items-center">Kontakt</div>
+        </div>
+      </nav>
+
+      <div class="max-w-4xl flex flex-col">
+        <h4 class="font-medium text-3xl flex justify-center items-center gap-8 mb-8"><span class="grow h-1 bg-zinc-800 rounded-full"></span>Vem är jag?<span class="grow h-1 bg-zinc-800 rounded-full"></span></h4>
+        <p class="mb-8">
           Tjena! Jag heter Balazs Hevesi (namnet är av ungerskt ursprung). I nuläget så är jag en teknik studerande gymnasieelev i Kronoberg, Älmhult som har ett stort intresse för webbutveckling. Det var först i början av tvåan där jag skrev min första rad HTML. Snabbt därefter blev jag intresserad av hur webben fungerar. “Att bli webbutvecklare kanske är något för mig”? tänkte jag då. Då bestämde jag mig för att ta webbutvecklingen på allvar eftersom jag inte hade något intresse av att plugga vidare på universitet i 5 år till. <br />
           Med hjälp av resurser som TheOdinProject har jag studerat webbutveckling parallellt med skolan i snart ett år.
         </p>
-        <div class="flex gap-5 w-full text-center">
-          <div class="bg-zinc-200 p-4 grow basis-1/3 rounded-lg border-t-2 border-zinc-300">
-            <h5 class="mb-2">Mina kunskaper i frontend</h5>
+        <div class="flex flex-col gap-5 w-full text-center mb-8 md:flex-row">
+          <div class="mb-2 font-semibold bg-zinc-200 p-4 grow basis-1/3 rounded-lg border-t-2 border-zinc-300 items-stretch">
+            <h5 class="mb-2 font-semibold">Mina kunskaper i frontend</h5>
             <div class="text-2xl">
               <i class="devicon-html5-plain"></i>
               <i class="devicon-css3-plain"></i>
@@ -86,14 +94,14 @@
               <i class="devicon-javascript-plain"></i>
             </div>
           </div>
-          <div class="mb-2 bg-zinc-200 p-4 grow basis-1/3 rounded-lg border-t-2 border-zinc-300">
-            <h5 class="mb-2">Mina kunskaper i backend</h5>
+          <div class="mb-2 bg-zinc-200 p-4 grow basis-1/3 rounded-lg border-t-2 border-zinc-300 items-stretch">
+            <h5 class="mb-2 font-semibold">Mina kunskaper i backend</h5>
             <div class="text-2xl">
               <i class="devicon-nodejs-plain grow"></i>
             </div>
           </div>
-          <div class="mb-2 bg-zinc-200 p-4 grow basis-1/3 rounded-lg border-t-2 border-zinc-300">
-            <h5 class="mb-2">Mina verktyg</h5>
+          <div class="mb-2 bg-zinc-200 p-4 grow basis-1/3 rounded-lg border-t-2 border-zinc-300 items-stretch">
+            <h5 class="mb-2 font-semibold">Mina verktyg</h5>
             <div class="text-2xl">
               <i class="devicon-vscode-plain"></i>
               <i class="devicon-git-plain"></i>
@@ -101,6 +109,46 @@
             </div>
           </div>
         </div>
+      </div>
+      <h4 class="font-medium text-3xl flex justify-center items-center gap-8 mb-8"><span class="grow h-1 bg-zinc-800 rounded-full"></span>Mina projekt<span class="grow h-1 bg-zinc-800 rounded-full"></span></h4>
+      <div class="flex gap-4 w-full mb-8 flex-col-reverse lg:flex-row">
+        <div class="basis-2/5 flex flex-col">
+          <div class="grow p-4 rounded-lg border-t-2 border-zinc-300 bg-zinc-200">
+            <h5 class="font-semibold text-center">Resmash Padel</h5>
+            <p>En landing page för Resmash</p>
+          </div>
+          <div class="flex justify-center gap-4 mt-4">
+            <a href="https://www.resmash.com/" target="_blank" class="grow text-center border-t-2 border-amber-100 active:scale-95 transition-transform bg-amber-300 rounded-lg p-2 font-semibold flex gap-4 justify-center">Öppna<i class="fi fi-br-arrow-up-right-from-square"></i></a>
+            <a href="https://www.resmash.com/" target="_blank" class="grow text-center border-t-2 border-amber-100 active:scale-95 transition-transform bg-amber-300 rounded-lg p-2 font-semibold flex gap-4 justify-center">Kod <i class="fi fi-br-terminal"></i></a>
+          </div>
+        </div>
+        <img src="resmash01.png" class="grow object-cover shadow max-h-60 bg-slate-500 rounded-lg" />
+      </div>
+      <div class="flex gap-4 w-full mb-8 flex-col-reverse lg:flex-row-reverse">
+        <div class="basis-2/5 flex flex-col">
+          <div class="grow p-4 rounded-lg border-t-2 border-zinc-300 bg-zinc-200">
+            <h5 class="font-semibold text-center">Resmash Padel</h5>
+            <p>En landing page för Resmash</p>
+          </div>
+          <div class="flex justify-center gap-4 mt-4">
+            <a href="https://www.resmash.com/" target="_blank" class="grow text-center border-t-2 border-amber-100 active:scale-95 transition-transform bg-amber-300 rounded-lg p-2 font-semibold flex gap-4 justify-center">Öppna<i class="fi fi-br-arrow-up-right-from-square"></i></a>
+            <a href="https://www.resmash.com/" target="_blank" class="grow text-center border-t-2 border-amber-100 active:scale-95 transition-transform bg-amber-300 rounded-lg p-2 font-semibold flex gap-4 justify-center">Kod <i class="fi fi-br-terminal"></i></a>
+          </div>
+        </div>
+        <img src="resmash01.png" class="grow object-cover shadow max-h-60 bg-slate-500 rounded-lg" />
+      </div>
+      <div class="flex gap-4 w-full mb-8 flex-col-reverse lg:flex-row">
+        <div class="basis-2/5 flex flex-col">
+          <div class="grow p-4 rounded-lg border-t-2 border-zinc-300 bg-zinc-200">
+            <h5 class="font-semibold text-center">Resmash Padel</h5>
+            <p>En landing page för Resmash</p>
+          </div>
+          <div class="flex justify-center gap-4 mt-4">
+            <a href="https://www.resmash.com/" target="_blank" class="grow text-center border-t-2 border-amber-100 active:scale-95 transition-transform bg-amber-300 rounded-lg p-2 font-semibold flex gap-4 justify-center">Öppna<i class="fi fi-br-arrow-up-right-from-square"></i></a>
+            <a href="https://www.resmash.com/" target="_blank" class="grow text-center border-t-2 border-amber-100 active:scale-95 transition-transform bg-amber-300 rounded-lg p-2 font-semibold flex gap-4 justify-center">Kod <i class="fi fi-br-terminal"></i></a>
+          </div>
+        </div>
+        <img src="resmash01.png" class="grow object-cover shadow max-h-60 bg-slate-500 rounded-lg" />
       </div>
     </div>
   </body>
