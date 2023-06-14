@@ -15,7 +15,7 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styless.css" />
   </head>
-  <body class="p-4 selection:bg-red-200 bg-gradient-to-r from-cyan-600 to-cyan-300 flex flex-col text-white md:cursor-none">
+  <body class="p-4 selection:bg-red-200 bg-gradient-to-r from-cyan-600 to-cyan-300 flex flex-col text-white">
     <div>
       <div class="balls">
         <div class="cursor01 movinggg"></div>
@@ -26,7 +26,7 @@
         <div class="cursor06 movinggg"></div>
         <div class="cursor07 movinggg"></div>
       </div>
-      <div class="main-cursorrr absolute backdrop-invert h-2 w-2 z-50 rounded-full shadow pointer-events-none hidden md:block"></div>
+      <div class="main-cursorrr absolute z-20 backdrop-invert h-2 w-2 rounded-full shadow pointer-events-none hidden md:block"></div>
     </div>
 
     <div class="bg-gradient-to-r from-cyan-600 to-cyan-300 h-semi-screen flex flex-col justify-center items-center">
@@ -59,27 +59,27 @@
           <div class="burgirBg absolute opacity-100 backdrop-blur w-full h-full"></div>
           <div class="burgirNav shadow-2xl relative bg-slate-100 w-full h-full border-t-2 border-white rounded-t-3xl text-zinc-800 flex justify-center items-center flex-col text-4xl font-bold gap-8 select-none">
             <button class="absolute top-0 right-0 p-5" aria-label="stäng"><i class="fi fi-br-circle-xmark"></i></button>
-            <button>Hem</button>
-            <button>Om mig</button>
-            <button>Projekt</button>
-            <button>Kontakt</button>
+            <button class="burgirNavBtnHem">Hem</button>
+            <button class="burgirNavBtnOmMig">Om mig</button>
+            <button class="burgirNavBtnProjekt">Projekt</button>
+            <button class="burgirNavBtnKontakt">Kontakt</button>
           </div>
         </div>
       </nav>
     </div>
 
-    <div class="relative z-10 bg-zinc-100 text-zinc-800 mr-auto ml-auto max-w-7xl border-t-2 text-lg border-white rounded-xl shadow-2xl flex flex-col p-8 md:p-16">
+    <div class="relative z-30 bg-zinc-100 text-zinc-800 mr-auto ml-auto max-w-7xl border-t-2 text-lg border-white rounded-xl shadow-2xl flex flex-col p-8 md:p-16">
       <nav class="sticky text-white top-28 -translate-y-16 z-40 h-0 justify-center items-center select-none hidden md:flex">
         <div class="flex justify-center gap-3 items-center bg-white p-2 rounded-full shadow font-medium">
-          <div class="p-1 pl-3 pr-3 active:scale-95 transition-all rounded-full flex justify-center items-center bg-amber-400">Hem</div>
-          <div class="p-1 pl-3 pr-3 active:scale-95 transition-all bg-cyan-500 rounded-full flex justify-center items-center">Om mig</div>
-          <div class="p-1 pl-3 pr-3 active:scale-95 transition-all bg-cyan-500 rounded-full flex justify-center items-center">Projekt</div>
-          <div class="p-1 pl-3 pr-3 active:scale-95 transition-all bg-cyan-500 rounded-full flex justify-center items-center">Kontakt</div>
+          <div class="navBtnHem p-1 pl-3 pr-3 active:scale-95 transition-all bg-cyan-500 rounded-full flex justify-center items-center">Hem</div>
+          <div class="navBtnOmMig p-1 pl-3 pr-3 active:scale-95 transition-all bg-cyan-500 rounded-full flex justify-center items-center">Om mig</div>
+          <div class="navBtnProjekt p-1 pl-3 pr-3 active:scale-95 transition-all bg-cyan-500 rounded-full flex justify-center items-center">Projekt</div>
+          <div class="navBtnKontaktaMig p-1 pl-3 pr-3 active:scale-95 transition-all bg-cyan-500 rounded-full flex justify-center items-center">Kontakt</div>
         </div>
       </nav>
 
       <div class="max-w-4xl flex flex-col">
-        <h4 class="font-medium text-3xl flex justify-center items-center gap-8 mb-8"><span class="grow h-1 bg-zinc-800 rounded-full"></span>Vem är jag?<span class="grow h-1 bg-zinc-800 rounded-full"></span></h4>
+        <h4 class="omMig scroll-mt-32 text-center font-medium text-4xl flex justify-center items-center gap-8 mb-8"><span class="grow h-1 bg-zinc-800 rounded-full"></span>Vem är jag?<span class="grow h-1 bg-zinc-800 rounded-full"></span></h4>
         <p class="mb-8">
           Tjena! Jag heter Balazs Hevesi (namnet är av ungerskt ursprung). I nuläget så är jag en teknik studerande gymnasieelev i Kronoberg, Älmhult som har ett stort intresse för webbutveckling. Det var först i början av tvåan där jag skrev min första rad HTML. Snabbt därefter blev jag intresserad av hur webben fungerar. “Att bli webbutvecklare kanske är något för mig”? tänkte jag då. Då bestämde jag mig för att ta webbutvecklingen på allvar eftersom jag inte hade något intresse av att plugga vidare på universitet i 5 år till. <br />
           Med hjälp av resurser som TheOdinProject har jag studerat webbutveckling parallellt med skolan i snart ett år.
@@ -110,7 +110,7 @@
           </div>
         </div>
       </div>
-      <h4 class="font-medium text-3xl flex justify-center items-center gap-8 mb-8"><span class="grow h-1 bg-zinc-800 rounded-full"></span>Mina projekt<span class="grow h-1 bg-zinc-800 rounded-full"></span></h4>
+      <h4 class="projekt scroll-mt-32 text-center font-medium text-4xl flex justify-center items-center gap-8 mb-8"><span class="grow h-1 bg-zinc-800 rounded-full"></span>Mina projekt<span class="grow h-1 bg-zinc-800 rounded-full"></span></h4>
       <div class="flex gap-4 w-full mb-12 flex-col-reverse lg:flex-row">
         <div class="basis-2/5 flex flex-col">
           <div class="grow p-4 rounded-lg border-t-2 border-zinc-300 bg-zinc-200">
@@ -150,7 +150,7 @@
         </div>
         <img src="resmash01.png" class="grow object-cover shadow max-h-60 bg-slate-500 rounded-lg" />
       </div>
-      <h4 class="font-medium text-3xl flex justify-center items-center gap-8 mb-8"><span class="grow h-1 bg-zinc-800 rounded-full"></span>Kontakta mig<span class="grow h-1 bg-zinc-800 rounded-full"></span></h4>
+      <h4 class="kontaktaMig scroll-mt-32 text-center font-medium text-4xl flex justify-center items-center gap-8 mb-8"><span class="grow h-1 bg-zinc-800 rounded-full"></span>Kontakta mig<span class="grow h-1 bg-zinc-800 rounded-full"></span></h4>
       <div class="flex flex-col items-center">
         <p class="text"><a href="mailto:balazshevesi@icloud.com">email: balazshevesi@icloud.com</a></p>
         <a class="p-2 pr-6 pl-6 rounded-lg mt-4 bg-rose-600 border-t-2 border-rose-400 active:scale-95 transition-all text-white" href="Balazs-Hevesi-CV-2023-Q2-V2.pdf" download="Balazs-Hevesi-CV-2023-Q2.pdf">Ladda ner mitt CV</a>

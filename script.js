@@ -97,7 +97,54 @@ let áToggle = false;
   console.log("aa");
 });
 
-//menue
+//^nav
+
+let navBtnHem = document.querySelector(".navBtnHem");
+let navBtnOmMig = document.querySelector(".navBtnOmMig");
+let navBtnProjekt = document.querySelector(".navBtnProjekt");
+let navBtnKontaktaMig = document.querySelector(".navBtnKontaktaMig");
+
+let hem = document.querySelector("h1");
+let omMig = document.querySelector(".omMig");
+let projekt = document.querySelector(".projekt");
+let kontaktaMig = document.querySelector(".kontaktaMig");
+
+navBtnHem.addEventListener("click", () => {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+});
+navBtnOmMig.addEventListener("click", () => {
+  omMig.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+});
+navBtnProjekt.addEventListener("click", () => {
+  projekt.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+});
+navBtnKontaktaMig.addEventListener("click", () => {
+  kontaktaMig.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+});
+
+//^ burgir menue
+
+let burgirNavBtnHem = document.querySelector(".burgirNavBtnHem");
+let burgirNavBtnOmMig = document.querySelector(".burgirNavBtnOmMig");
+let burgirNavBtnProjekt = document.querySelector(".burgirNavBtnProjekt");
+let burgirNavBtnKontakt = document.querySelector(".burgirNavBtnKontakt");
+
+burgirNavBtnHem.addEventListener("click", () => {
+  closeBurgirMenue();
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+});
+burgirNavBtnOmMig.addEventListener("click", () => {
+  closeBurgirMenue();
+  omMig.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+});
+burgirNavBtnProjekt.addEventListener("click", () => {
+  closeBurgirMenue();
+  projekt.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+});
+burgirNavBtnKontakt.addEventListener("click", () => {
+  closeBurgirMenue();
+  kontaktaMig.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+});
 
 let body = document.querySelector("body");
 let completeBurgir = document.querySelector(".completeBurgir");
@@ -106,24 +153,60 @@ let burgirNav = document.querySelector(".burgirNav");
 let burgirMenueCloseBtn = document.querySelector("[aria-label='stäng']");
 let burgirMenueOpenBtn = document.querySelector(".burgirMenueBtn");
 
-//close
 burgirMenueCloseBtn.addEventListener("click", () => {
+  closeBurgirMenue();
+});
+
+burgirMenueOpenBtn.addEventListener("click", () => {
+  openBurgirMenue();
+});
+
+burgirNavBtnHem.addEventListener("click", () => {});
+
+function closeBurgirMenue() {
   burgirNav.classList.add("animate-close-burgir");
   burgirBg.classList.add("animate-fade-out");
+  body.classList.remove("overflow-hidden");
   setTimeout(() => {
     burgirNav.classList.remove("animate-close-burgir");
     burgirBg.classList.remove("animate-fade-out");
     completeBurgir.classList.add("hidden");
   }, 200);
-});
+}
 
-//open
-burgirMenueOpenBtn.addEventListener("click", () => {
+function openBurgirMenue() {
   completeBurgir.classList.remove("hidden");
   burgirNav.classList.add("animate-open-burgir");
   burgirBg.classList.add("animate-fade-in");
+  body.classList.add("overflow-hidden");
   setTimeout(() => {
     burgirNav.classList.remove("animate-open-burgir");
     burgirBg.classList.remove("animate-fade-in");
   }, 300);
-});
+}
+
+//~~~
+
+const navLinks = [navBtnOmMig, navBtnProjekt, burgirNavBtnKontakt];
+
+function handleNavLinks() {
+  const scrollPosition = window.scrollY;
+
+  // Iterate over each section and check if it is in the viewport
+  document.querySelectorAll("h4").forEach((section) => {
+    const sectionId = section.getAttribute("id");
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      // Add the 'active' class to the corresponding navigation link
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${sectionId}`) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+}
+handleNavLinks()
